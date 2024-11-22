@@ -17,11 +17,11 @@ function closeCart() {
 // Product Data
 const products = {
     leafy: [
-        { name: "Spinach", price: 50, image: "assets/spinach.jpg" },
-        { name: "Lettuce", price: 30, image: "assets/lettuce.jpg" },
-        { name: "Kale", price: 60, image: "assets/kale.jpg" },
+        { name: "Spinach", price: 50, image: "assets/Spinach.jpg" },
+        { name: "Lettuce", price: 30, image: "assets/Lettuce.jpg" },
+        { name: "Kale", price: 60, image: "assets/Kale.jpg" },
         { name: "Cabbage", price: 40, image: "assets/cabbage.jpg" },
-        { name: "Arugula", price: 55, image: "assets/arugula.jpg" },
+        { name: "Arugula", price: 55, image: "assets/Arugula.jpg" },
         { name: "Swiss Chard", price: 65, image: "assets/Swiss Chard.jpg" },
         { name: "Collard Greens", price: 50, image: "assets/collard_greens.jpg" },
         { name: "Mustard Greens", price: 45, image: "assets/mustard_greens.jpg" },
