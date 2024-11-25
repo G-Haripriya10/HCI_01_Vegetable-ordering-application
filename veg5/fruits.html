@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATEGORY_NAME Vegetables</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/basket.png" alt="Basket Logo" class="basket-logo">
+                <h1>VeggieStore</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="leafy.html">Leafy</a></li>
+                <li><a href="root.html">Root</a></li>
+                <li><a href="fruits.html">Fruits</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+            </ul>
+            <div class="icons">
+                <img src="assets/cart.png" alt="Cart Icon" class="icon" onclick="openCart()">
+                <img src="assets/account.png" alt="Account Icon" class="icon">
+            </div>
+        </nav>
+    </header>
+
+    <section id="content">
+        <h2>CATEGORY_NAME Vegetables</h2>
+        <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <div id="cart" class="cart-popup">
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will appear here -->
+        </ul>
+        <button onclick="closeCart()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Load products for this category
+        const category = "CATEGORY_NAME".toLowerCase();
+        const grid = document.getElementById("product-grid");
+        const categoryProducts = products[category];
+        categoryProducts.forEach((product, index) => {
+            const productCard = `
+                <div class="product-card">
+                    <img src="${product.image}" alt="${product.name}" />
+                    <h3>${product.name}</h3>
+                    <p>₹${product.price}/kg</p>
+                    <button onclick="addToCart('${category}', ${index})">Add to Cart</button>
+                </div>
+            `;
+            grid.innerHTML += productCard;
+        });
+    </script>
+</body>
+</html>
